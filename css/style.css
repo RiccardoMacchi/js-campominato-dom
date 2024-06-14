@@ -15,14 +15,14 @@ main {
 }
 
 /* Regole select */
-/* select {
+select {
     padding: 2px;
     border-radius:  5px;
 }
 #my_select {
     text-align: center;
-    margin-bottom: 20px;
-} */
+    margin-bottom: 110px;
+}
 
 
 #container{
@@ -31,6 +31,7 @@ main {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: relative;
 }
 
 /* Regole bottone */
@@ -81,5 +82,27 @@ main {
 }
 
 .red {
+    background-color: red;
+}
+
+
+/* Regole win lose */
+
+#display_result {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 50%;
+    padding: 20px 0;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.win {
+    background-color: green;
+}
+
+.lose {
     background-color: red;
 }
