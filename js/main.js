@@ -3,6 +3,10 @@ const gameStart = document.getElementById("click_me");
 // Recupero container in pagina
 const container = document.getElementById("container")
 
+// Generazione numeri random
+const randomNumbers = genRandSeq(1,100)
+console.log(randomNumbers)
+
 
 
 
@@ -21,7 +25,9 @@ gameStart.addEventListener("click",
         // } else if (difficult === "quarantanove") {
         //     numBlock = 50
         // }
-
+        for (let i = 0; i < randomNumbers.length; i++) {
+            console.log(randomNumbers[i])
+        }
         // Creazione ciclo per generare 100 blocchi
         for (let i = 1; i < 101; i++){
             // Generazione square in pagina
@@ -34,8 +40,15 @@ gameStart.addEventListener("click",
             // Cambio classe al click
             divSquare.addEventListener("click",
                 ()=> {
-                    divSquare.classList.toggle("azzur")
-                    console.log(i)
+                    // divSquare.classList.toggle("azzur")
+                    console.log("indice",i)
+                    console.log("numero random", randomNumbers[i])
+                    if (randomNumbers.includes(i)) {
+                        divSquare.classList.toggle("red")
+                    } else {
+                        divSquare.classList.toggle("azzur")
+                    }
+                    
                 }
             )
         }
