@@ -5,6 +5,9 @@
     box-sizing: border-box;
 }
 
+p {
+    text-align: center;
+}
 /* Regole container */
 
 main {
@@ -21,7 +24,7 @@ select {
 }
 #my_select {
     text-align: center;
-    margin-bottom: 110px;
+    margin: 20px auto;
 }
 
 
@@ -31,13 +34,12 @@ select {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    position: relative;
 }
 
 /* Regole bottone */
 
 #click_me {
-    max-width: 40%;
+    width: 40%;
     margin: 0 auto;
     padding: 10px;
     margin-bottom: 30px;
@@ -89,14 +91,11 @@ select {
 /* Regole win lose */
 
 #display_result {
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%,-50%);
     width: 50%;
     padding: 20px 0;
     text-align: center;
     border-radius: 10px;
+    margin: 20px auto;
 }
 
 .win {
@@ -105,4 +104,16 @@ select {
 
 .lose {
     background-color: red;
+}
+
+
+
+@media all and (max-width:568px){
+    #click_me {
+        width: 90%;
+    }
+
+    #my_select {
+        margin-bottom: 40px;
+    }
 }
