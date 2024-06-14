@@ -1,0 +1,82 @@
+/* Regole generali */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Regole container */
+
+main {
+    background-color: #011627;
+    color: white;
+    padding: 30px;
+    min-height: 100vh;
+}
+
+/* Regole select */
+/* select {
+    padding: 2px;
+    border-radius:  5px;
+}
+#my_select {
+    text-align: center;
+    margin-bottom: 20px;
+} */
+
+
+#container{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Regole bottone */
+
+#click_me {
+    max-width: 40%;
+    margin: 0 auto;
+    padding: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+    background-color: #8e8eff;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+/* regole quadratini */
+.square {
+
+    border: 2px solid white;
+    background-color: #011627;
+    position: relative;
+}
+/* Diverse width per livelli */
+.cento {
+    width: calc(100% / 10);
+    aspect-ratio: 1 / 1;
+}
+
+.ottantuno {
+    width: calc(100% / 9);
+    aspect-ratio: 1 / 1;
+}
+
+.quarantanove {
+    width: calc(100% / 7);
+    aspect-ratio: 1 / 1;
+}
+
+.square span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.azzur {
+    background-color: #7fffd4;
+}
+
