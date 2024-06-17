@@ -8,7 +8,7 @@ const result = document.getElementById("display_result");
 
 
 gameStart.addEventListener("click",
-    ()=>{
+    function myFunction() {
         // Per far si che il bottone mi cancelli quello che ha appena generato e in caso di duble click rimanga solo uno blocco
         container.innerHTML = "";
         // contatore click
@@ -29,7 +29,7 @@ gameStart.addEventListener("click",
         document.getElementById("n_bomb").innerHTML = numBlock
 
         // Generazione numeri random
-        const randomNumbers = genRandSeq(1,numBlock - 1);
+        const randomNumbers = genRandSeq(1,numBlock);
         console.log(randomNumbers);
 
         // Stampa singoli numeri arrey
@@ -54,23 +54,28 @@ gameStart.addEventListener("click",
                         divSquare.classList.toggle("red");
                         result.classList.add("red")
                         result.innerHTML = `<h3>Mi Dispiace! Hai schiacciato un bomba... HAI PERSO <i class="fa-solid fa-burst"></i></h3><h4>Hai comunque totalizzato ${n * 10} punti</h4>`
-                        // Tutte le bombe diventano red
-                        console.log("questo è", randomNumbers)
-                        // il softoware scopre tutte le bombe nascoste prova
-                        // while (i = randomNumbers.length){
-                        //     if (randomNumbers.includes(i)) {
-                        //         divSquare.classList.add("red")
-                        //     }
+                        
+                        // Dispaly tutte le bombe
+                        let allSquare = document.querySelectorAll(".square")
+                        for (let i = 0; i < allSquare.length; i++){
+                            if (randomNumbers.includes(i)){
+                                console.log("i è uguale a:",i)
+                                allSquare[i - 1].innerHTML = `<span><i class="fa-solid fa-bomb"></i></span>`;
+                                allSquare[i - 1].classList.add("red");
+                                console.log(allSquare[i - 1].classList)
+                            } else {
+                                // allSquare[i].classList.add("blocked");
+                            }
+                            
+                        }
+                        
                     } else if (n === numBlock -17) {
                         result.classList.add("win")
                         result.innerHTML = `<span>INCREDIBILE!! HAI VINTO!! ora vai e vinci al superenalotto<i class="fa-solid fa-burst"></i></span>`
                     } else {
                         n++
                         divSquare.classList.toggle("azzur")
-                    }
-                    
-                    
-                    
+                    }    
                 }
             )
         }

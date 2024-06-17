@@ -51,7 +51,6 @@ select {
 
 /* regole quadratini */
 .square {
-
     border: 2px solid white;
     background-color: #011627;
     position: relative;
@@ -72,11 +71,17 @@ select {
     aspect-ratio: 1 / 1;
 }
 
+/* Regole square */
+
 .square span {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+}
+
+.square i {
+    font-size: 2rem;
 }
 
 .azzur {
@@ -85,6 +90,10 @@ select {
 
 .red {
     background-color: red;
+}
+
+.blocked {
+    background-color: #011627;
 }
 
 
@@ -115,5 +124,8 @@ select {
 
     #my_select {
         margin-bottom: 40px;
+    }
+    .square i {
+        font-size: 1.3rem;
     }
 }
